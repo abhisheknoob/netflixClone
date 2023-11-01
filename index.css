@@ -1,0 +1,772 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    overflow-x: hidden;
+
+}
+header {
+   
+    background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/dace47b4-a5cb-4368-80fe-c26f3e77d540/f5b52435-458f-498f-9d1d-ccd4f1af9913/IN-en-20231023-popsignuptwoweeks-perspective_alpha_website_large.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    border-bottom: 9px solid rgb(75, 74, 74);
+}
+header .top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 150px;
+}
+header .top .logo svg{
+    width: 160px;
+  fill: #E50914;
+
+
+
+}
+header .top .logo{
+    z-index: 99;
+}
+
+.navbarRight{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    z-index: 9;
+}
+.navbarRight .signIn button{
+    padding: 10px 15px;
+    font-size: 15px;
+    font-weight: 700;
+    background-color: #E50914;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    transition: 0.2s linear;
+    cursor: pointer;
+}
+.navbarRight .signIn button:hover{
+    background-color: #e50914be;
+}
+/* .default-ltr-cache-1goff39 {
+    display: flex;
+    border: 2px solid black;
+    padding: 8px 20px;
+}
+.default-ltr-cache-1goff39 select{
+    border: none;
+    font-size: 18px;
+} */
+.language{
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+   border: 1px solid rgb(111, 111, 111);
+   padding: 10px 15px;
+   align-items: center;
+   border-radius: 5px;
+}
+.language i{
+    color: white;
+    font-size: 20px;
+}
+select{
+   border: none;
+   font-size: 18px;
+   font-weight: 700;
+   background-color: transparent;
+   color: white;
+}
+header .Main h1{
+   font-size: 60px;
+   color: white;
+   z-index: 9;
+   /* margin-top: 150px;
+   margin-bottom: 20px; */
+}
+header .Main {
+    display: flex;
+    justify-content: centere;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    /* border: 2px solid red; */
+    padding: 170px 140px 150px 140px;
+  
+}
+header .Main p{
+    font-size: 26px;
+    font-weight: 600;
+    margin: 15px 0;
+    color: white;
+    z-index: 9;
+}
+header .Main input,
+.accordianBottom input
+{
+    padding: 18px 110px 18px 30px;
+    font-size: 19px;
+    background: rgba(0, 0, 0, 0.345);
+   border: 1px solid rgb(128, 128, 128);
+}
+header .Main input::placeholder{
+    text-align: start;
+    color: white;
+   
+}
+header .Main button,
+.accordianBottom button
+{
+    padding: 15px 45px 15px 25px;
+    font-size:25px ;
+    background-color: #E50914;
+    color: white;
+    border: none;
+
+}
+header .Main .emailLogin,
+.accordianBottom .emailLogin
+{
+    display: flex;
+    gap: 12px;
+    margin: 10px 0;
+    z-index: 9;
+}
+header .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgb(0 0 0 / 40%);
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
+}
+.SmartTv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 85px 140px;
+    background-color: black;
+    border-bottom: 9px solid rgb(75, 74, 74);
+}
+.SmartTv .enjoy h2{
+    font-size: 55px;
+    font-weight: 800;
+    color: white;
+}
+.SmartTv .enjoy p{
+    color: white;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 15px 0;
+}
+
+.ImageContainer{
+    position: relative;
+}
+.TV img{
+    z-index: 999;
+    position: relative;
+}
+.VideoOverlay{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 70%;
+    height: 65%;
+    top: 76px;
+    left: 92px;
+    /* z-index: -1; */
+  
+
+}
+.VideoOverlay video{
+  
+    width: 100%;
+    height: 100%;
+  
+   
+   
+    object-fit: contain;
+}
+.downloading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 85px 140px;
+    background-color: black;
+    border-bottom: 9px solid rgb(75, 74, 74);
+}
+.downloading .downView {
+    position: relative;
+}
+.downloading .downView .downloadingStarted{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    border: 3px solid rgb(111, 111, 111);
+    width: 60%;
+    position: absolute;
+    bottom: 47px;
+    left: 120px;
+    background-color: black;
+    border-radius: 9px;
+    padding: 9px 13px;
+}
+.downloading .downView .downloadingStarted .downIMG  img{
+  width: 65px;
+}
+.downloading .downView .downloadingStarted .MovieName{
+    margin-left: 13px;
+}
+.downloading .downView .downloadingStarted .MovieName h3{
+   font-size: 23px;
+   color: white;
+}
+.downloading .downView .downloadingStarted .MovieName h4{
+    color: #0071EB;
+    font-size: 15px;
+}
+.downloading .downloadGuide h2{
+    font-size: 55px;
+    font-weight: 800;
+    color: white;
+}
+.downloading .downloadGuide  p{
+    color: white;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 15px 0;
+}
+.WatchEverywhere{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 85px 140px;
+    border-bottom: 9px solid rgb(75, 74, 74);
+}
+.WatchLeft h2{
+    font-size: 55px;
+    font-weight: 800;
+    color: white;
+}
+.WatchLeft  p{
+    color: white;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 15px 0;
+}
+.WatchRight  img{
+    position: relative;
+    z-index: 999;
+}
+.WatchRight {
+    position: relative;
+}
+.WatchRight .videoOverlay{
+    position: absolute;
+   
+    width: 65%;
+    height: 55%;
+    top: 40px;
+    left: 110px;
+
+}
+.WatchRight .videoOverlay video{
+    width: 100%;
+    height: 100%;
+  
+   
+   
+    object-fit: contain;
+}
+.CreateProfile{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 85px 140px;
+    border-bottom: 9px solid rgb(75, 74, 74);
+}
+.CreateProfile .ProfileRight h2{
+    font-size: 55px;
+    font-weight: 800;
+    color: white;
+
+}
+.CreateProfile .ProfileRight p{
+    color: white;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 15px 0;
+}
+.accordian {
+    display: flex;
+     padding: 20px 140px;
+    flex-direction: column;
+    background-color: black;
+    border-bottom: 9px solid rgb(75, 74, 74);
+}
+.accordian h1{
+    font-size: 55px;
+    font-weight: 800;
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 25px;
+} 
+.bootstarpAccordian .accordion-item{
+    background-color: rgb(58, 58, 58);
+  
+}
+.bootstarpAccordian .accordion-item h2{
+    padding: 8px 0;
+    margin: 10px 0;
+   
+   
+    
+}
+.bootstarpAccordian .accordion-item h2 button{
+    font-size: 28px;
+    font-size: 800;
+  border: none;
+  background-color: rgb(58, 58, 58);
+  color: white;
+ 
+}
+.accordion-body{
+    color: white;
+    background-color: rgb(48, 47, 47);
+    font-size: 28px;
+}
+.accordion-button:focus {
+    box-shadow: none !important;
+  }
+ 
+  .accordianBottom .emailLogin{
+/* border: 2px solid white; */
+display: flex;
+/* align-items: center; */
+justify-content: center;
+  }
+  .accordianBottom p{
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 15px 0;
+   text-align: center;
+  }
+  .accordianBottom{
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+  footer .footerBottom{
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+  
+  }
+  footer{
+    color: rgb(195, 195, 195);
+    background-color: black;
+    padding: 85px 140px;
+  }
+  footer .call p{
+    color: rgb(195, 195, 195);
+    margin-bottom: 20px;
+  }
+  footer li {
+    list-style: none;
+    text-decoration: underline;
+    margin: 12px 0;
+  }
+  footer .language{
+    width: 45%;
+    margin: 20px 0;
+  }
+  /* ===============
+  media queries 
+  ============ */
+  @media (max-width:1100px) {
+     .SmartTv {
+   
+    padding: 85px 70px;
+  
+  }
+  .SmartTv .enjoy h2 {
+    font-size: 45px;
+   
+}
+.SmartTv .enjoy p {
+    
+    font-size: 22px;
+   
+}
+.downloading {
+    padding: 85px 70px;
+}
+.downloading .downloadGuide h2 {
+    font-size: 45px;
+   
+}
+.downloading .downloadGuide p {
+    font-size: 22px;
+    
+}
+.WatchEverywhere {
+    padding: 85px 70px;
+}
+.WatchLeft h2 {
+   font-size: 45px;
+}
+.WatchLeft p {
+    font-size: 22px;
+}
+.CreateProfile {
+    padding: 85px 70px;
+}
+.CreateProfile .ProfileRight h2 {
+    font-size: 45px;
+}
+.CreateProfile .ProfileRight p {
+    font-size: 22px;
+}
+.accordian {
+    padding: 85px 70px;
+}
+footer {
+    padding: 85px 70px;
+}
+header .top {
+       
+    padding: 25px 70px;
+}
+}
+
+
+
+@media (max-width:900px) {
+    
+    header .top {
+       
+        padding: 25px 36px;
+    }
+    
+header .Main {
+ 
+    padding: 144px 97px 110px 34px;
+}
+
+header .Main h1 {
+    font-size: 35px;
+  
+}
+
+header .Main p {
+    font-size: 20px;
+  
+}
+
+header .Main input, .accordianBottom input {
+    padding: 17px 202px 18px 30px;
+   
+}
+.SmartTv {
+  
+    padding: 85px 50px;
+    flex-direction: column;
+ 
+}
+.SmartTv .enjoy h2 {
+    font-size: 38px;
+    text-align: center;
+}
+.SmartTv .enjoy p {
+
+    font-size: 20px;
+    text-align: center;
+   
+}
+.downloading {
+    padding: 85px 50px;
+    flex-direction: column-reverse;
+}
+.downloading .downloadGuide h2 {
+    font-size: 38px;
+    text-align: center;
+}
+.downloading .downloadGuide p{
+    font-size: 20px;
+    text-align: center;
+}
+
+
+.WatchEverywhere {
+    padding: 85px 50px;
+    flex-direction: column;
+}
+.WatchLeft h2 {
+    font-size: 38px;
+    text-align: center;
+}
+.WatchLeft p{
+    font-size: 20px;
+    text-align: center;
+}
+.CreateProfile {
+    padding: 85px 50px;
+    flex-direction: column-reverse;
+}
+.CreateProfile .ProfileRight h2 {
+    font-size: 38px;
+    text-align: center;
+}
+.CreateProfile .ProfileRight p{
+    font-size: 20px;
+    text-align: center;
+}
+.accordian h1 {
+    font-size: 42px;
+   
+}
+.accordian {
+    padding: 85px 50px;
+}
+.bootstarpAccordian .accordion-item h2 button {
+    font-size: 22px;
+   
+}
+.accordion-body {
+  
+ 
+    font-size: 22px;
+}
+.accordianBottom p {
+  
+    font-size: 20px;
+   
+}
+
+footer .footerBottom {
+  
+    grid-template-columns: 1fr 1fr ;
+}
+}
+@media (max-width:700px) {
+    .accordianBottom .emailLogin {
+     
+        flex-direction: column;
+    }
+    header .Main .emailLogin, .accordianBottom .emailLogin {
+     
+        flex-direction: column;
+    }
+    header .Main input, .accordianBottom input {
+        padding: 17px 274px 18px 30px;
+    }
+    footer .language {
+        width: 60%;
+     
+    }
+}
+@media (max-width:480px) {
+    header .top .logo svg {
+        width: 104px;
+       
+    }
+    header .top {
+        padding: 25px 17px;
+    }
+    .language {
+      
+        padding: 7px 6px;
+        
+      
+    }
+    .navbarRight .signIn button {
+        padding: 7px 13px;
+        font-size: 12px;
+      
+    }
+    header .Main {
+        padding: 96px 77px 81px 25px;
+    }
+    header .Main p {
+        font-size: 17px;
+    }
+    header .Main input, .accordianBottom input {
+        padding: 12px 130px 12px 11px;
+        font-size: 17px;
+    }
+    header .Main button, .accordianBottom button {
+        padding: 15px 20px 15px 4px;
+        font-size: 15px;
+      
+    }
+    .SmartTv {
+        padding: 50px 18px;
+       
+    }
+    .SmartTv .enjoy h2 {
+        font-size: 33px;
+      
+    }
+    .SmartTv .enjoy p {
+        font-size: 18px;
+      
+    }
+    .TV img {
+       
+        width: 300px;
+    }
+    .VideoOverlay {
+      
+        width: 70%;
+        height: 65%;
+        top: 37px;
+        left: 45px;
+        /* z-index: -1; */
+    }
+    .downloading {
+        padding: 50px 18px;
+    }
+   
+    .downloading .downloadGuide p {
+        font-size: 18px;
+    }
+    img, svg {
+       
+        width: 300px;
+    }
+    .downloading .downView .downloadingStarted .downIMG img {
+        width: 32px;
+    }
+    .downloading .downView .downloadingStarted .MovieName h3 {
+        font-size: 13px;
+      
+    }
+    .downloading .downView .downloadingStarted .MovieName h4 {
+        
+        font-size: 10px;
+    }
+    .downloading .downView .downloadingStarted {
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        border: 3px solid rgb(111, 111, 111);
+        width: 80%;
+        position: absolute;
+        bottom: 10px;
+        left: 24px;
+        background-color: black;
+        border-radius: 9px;
+        padding: 5px 6px;
+    }
+    .WatchEverywhere {
+        padding: 50px 18px;
+    }
+    .WatchLeft p {
+      font-size: 18px;
+    }
+    .WatchRight .videoOverlay {
+        position: absolute;
+        width: 65%;
+        height: 55%;
+        top: 10px;
+        left: 50px;
+    }
+    .CreateProfile {
+        padding: 50px 18px;
+    }
+    .CreateProfile .ProfileRight p {
+        font-size: 18px;
+    }
+   
+.accordian {
+    padding: 50px 18px;
+}
+.bootstarpAccordian .accordion-item h2 {
+    padding: 0px 0;
+   
+}
+.bootstarpAccordian .accordion-item h2 button {
+    font-size: 19px;
+}
+.accordion-body {
+    font-size: 18px;
+}
+footer {
+    padding: 50px 18px;
+}
+@media (max-width:380px) {
+    header .top {
+        padding: 17px 10px;
+    }
+    header .top .logo svg {
+        width: 94px;
+    }
+    .language {
+        padding: 5px 5px;
+    }
+    header .Main h1 {
+        font-size: 29px;
+    }
+    header .Main {
+        padding: 60px 34px 52px 13px;
+    }
+  
+header .Main p {
+    font-size: 14px;
+}
+header .Main input, .accordianBottom input {
+    padding: 8px 100px 11px 11px;
+    font-size: 15px;
+}
+.SmartTv {
+    padding: 48px 10px;
+}
+.downloading {
+    padding: 48px 10px;
+}
+.WatchEverywhere {
+    padding: 48px 10px;
+}
+.CreateProfile {
+    padding: 48px 10px;
+}
+.accordian {
+    padding: 48px 10px;
+}
+footer {
+    padding: 48px 10px;
+}
+}
+@media (max-width:420px) {
+    header .Main {
+        padding: 96px 42px 81px 32px;
+    }
+    footer .language {
+        width: 80%;
+    }
+}
+@media (max-width:770px) {
+    header .Main input {
+        padding: 16px 62px 16px 30px;
+    }
+}
+
+
+ 
